@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+</head>
+<body class="bg-dark">
+    
+    <!-- Header start -->
+    <header class="site-header d-flex justify-content-end">
+        <div class="container">
+            <div class=" d-flex justify-content-end mt-5" >
+                
+                <button class="btn btn-primary bookmark-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="count-pokemons fw-bold">0</span>
+                </button>
+            </div>
+            
+        </div>
+    </header>
+    <!-- Header finish -->
+    
+    <!-- Main start -->
+    <main class="site-main">
+        <!-- Hero section start  -->
+        <section class="hero-section">
+            <div class="container">
+                <img class="mx-auto mt-5 img-fluid" src="./images/gif-poke.gif" alt="poke-images">
+                <form class="poke__form mt-5" action="https://echo.htmlacademy.ru/" method="post">
+                    <input class="input__search form-control  rounded mb-2 width-all" type="search" placeholder="search your pokemon">
+                    <select class="category__select  form-control  ms-md-2 mb-2  width-all">
+                        <option selected value="all">all</option>
+                    </select>
+                    <input class="fromcandy__count-input form-control   ms-md-1  me-md-1 mb-2  width-all" type="text" placeholder="from">
+                    <input class="tocandy__count-input form-control mb-2  width-all" type="text" placeholder="to">
+                    <select class="sort__select form-control ms-md-2 mb-2  width-all">
+                        <option hidden selected  value="all">Sort</option>
+                        <option selected value="a-z">A-Z</option>
+                        <option selected value="z-a">Z-A</option>
+                        <option selected value="from">FromWeight</option>
+                        <option selected value="to">TomWeight</option>
+                    </select>
+                    <button class="btn btn-success mb-2  width-all  ms-md-1" type="submit">seach</button>
+                </form>
+                <ul class="pokemons-list d-flex m-auto align-items-center flex-wrap justify-content-center ps-0">
+                    
+                </ul>
+            </div>
+        </section>
+        <!-- Hero section finish  -->
+        
+    </main>
+    <!-- Main finish  -->
+    
+    <!-- Footer start -->
+    <footer class="site-footer">
+        
+    </footer>
+    <!-- Footer finish -->
+    
+    
+    <!-- Ofcanvas start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">My pokemons:<strong class="ms-2 poke-count" >0</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="bookmark-list" >
+                
+            </ul>
+        </div>
+    </div>
+    <!-- Ofcanvas finish -->
+    
+    <!-- Template start -->
+    <template class="poke__template">
+        <li class="poke__item  mx-auto ">
+            
+            <h2 class="poke__name">
+            </h2>
+            <span class="poke__num"></span>
+            <img class="poke__img" src="" alt="">
+            <p class="poke__type"></p>
+            <strong class="poke__candy-count"></strong>
+            <span class="poke__spawn-chance"></span>
+            <span class="poke__time"></span>
+            <strong class="poke__weigth"></strong>
+            <p class="poke__weknes" ></p>
+            <button class="btn poke__btn-star" type="button" ></button>
+            <button class="btn js-delete-bookmark d-none" ></button>
+        </li>
+    </template>
+    <!-- Template finish -->
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

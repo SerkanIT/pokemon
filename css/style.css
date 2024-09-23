@@ -1,0 +1,155 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    /* font-family: var(); */
+    /* font-weight: var(); */
+    background-color: #ffff;
+    overflow-x: hidden;
+}
+.site-main{
+    flex-grow: 1;
+}
+.poke__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.width-all{
+    width: 100%;
+}
+.poke__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    width: 100%;
+    height: 380px;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    user-select: none;
+    transition: 0.4s ease;
+}
+.poke__item:hover{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.poke__img{
+    max-width: 100px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: transparent;
+    user-select: none;
+}
+.poke__name{
+    font-size: 20px;
+    font-weight: 900;
+}  
+.poke__num{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: #ffff;
+    padding: 5px;
+    font-weight: 800;
+}
+.poke__type{
+    font-size: 20px;
+    background-color: rgb(196, 228, 255);
+    padding: 5px;
+    border-radius: 20px;
+}
+.poke__time{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background-color: cyan;
+    color:black;
+    padding: 5px;
+    font-weight: 800;
+}
+.poke__weknes{
+    color: rgb(128, 0, 124);
+    font-size: 14px;
+    font-weight: 900    ;
+}
+.poke__btn-star{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    background-image: url("../images/pokeStarIconWhite.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.poke__btn-star:hover{
+    background-color: transparent;
+}
+/* .star-button:active{
+    background-image: url("../images/pokeStarYellow.svg");
+} */
+.bookmark-btn{
+    position: relative;
+    background-image: url("../images/favorite.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
+.count-pokemons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: yellow;
+    width: 20px;
+    height: 23px;
+    color: black;
+    border-radius: 50%;
+}
+.favorited{
+    background-image: url("../images/pokeStarYellow.svg");
+}
+.js-delete-bookmark{
+    position: absolute;
+    left: 18px;
+    top: 30px;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: none;
+}
+@media only screen and (min-width: 900px) {
+  .poke__form{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
